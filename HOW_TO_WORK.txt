@@ -1,0 +1,8 @@
+
+Go to file location with 'dags' folder inside
+
+# Start Airflow webserver
+airflow webserver -p 8080
+
+# Start airflow scheduler
+airflow scheduler

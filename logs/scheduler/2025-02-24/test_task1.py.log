@@ -1,0 +1,33 @@
+[2025-02-24T09:43:39.211+0800] {processor.py:186} INFO - Started process (PID=21965) to work on /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:43:39.213+0800] {processor.py:914} INFO - Processing file /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py for tasks to queue
+[2025-02-24T09:43:39.216+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:43:39.215+0800] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:43:39.242+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:43:39.236+0800] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py", line 3, in <module>
+    from airflow.operators import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators' (/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/__init__.py)
+[2025-02-24T09:43:39.245+0800] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:43:39.276+0800] {processor.py:208} INFO - Processing /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py took 0.077 seconds
+[2025-02-24T09:45:29.963+0800] {processor.py:186} INFO - Started process (PID=22926) to work on /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:45:29.965+0800] {processor.py:914} INFO - Processing file /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py for tasks to queue
+[2025-02-24T09:45:29.969+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:45:29.968+0800] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:45:30.003+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:45:29.991+0800] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py", line 3, in <module>
+    from airflow.operators import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators' (/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/__init__.py)
+[2025-02-24T09:45:30.006+0800] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:45:30.050+0800] {processor.py:208} INFO - Processing /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py took 0.097 seconds
+[2025-02-24T09:47:15.701+0800] {processor.py:186} INFO - Started process (PID=23772) to work on /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:47:15.703+0800] {processor.py:914} INFO - Processing file /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py for tasks to queue
+[2025-02-24T09:47:15.708+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:47:15.706+0800] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:47:15.714+0800] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py
+[2025-02-24T09:47:15.734+0800] {processor.py:208} INFO - Processing /mnt/c/Users/User/laurence/Muse_assessment/dags/test_task1.py took 0.051 seconds

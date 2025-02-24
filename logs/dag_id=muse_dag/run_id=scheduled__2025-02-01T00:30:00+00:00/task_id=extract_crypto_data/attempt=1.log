@@ -1,0 +1,77 @@
+[2025-02-24T09:50:30.776+0800] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-24T09:50:30.800+0800] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: muse_dag.extract_crypto_data scheduled__2025-02-01T00:30:00+00:00 [queued]>
+[2025-02-24T09:50:30.816+0800] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: muse_dag.extract_crypto_data scheduled__2025-02-01T00:30:00+00:00 [queued]>
+[2025-02-24T09:50:30.819+0800] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-02-24T09:50:30.877+0800] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): extract_crypto_data> on 2025-02-01 00:30:00+00:00
+[2025-02-24T09:50:30.882+0800] {standard_task_runner.py:72} INFO - Started process 25226 to run task
+[2025-02-24T09:50:30.885+0800] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'muse_dag', 'extract_crypto_data', 'scheduled__2025-02-01T00:30:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/muse_dag.py', '--cfg-path', '/tmp/tmpe85m1014']
+[2025-02-24T09:50:30.888+0800] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_crypto_data
+[2025-02-24T09:50:30.985+0800] {task_command.py:467} INFO - Running <TaskInstance: muse_dag.extract_crypto_data scheduled__2025-02-01T00:30:00+00:00 [running]> on host LAPTOP-7NCGBFK9.
+[2025-02-24T09:50:31.120+0800] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alksjdf63523@gmail.com' AIRFLOW_CTX_DAG_OWNER='laurence' AIRFLOW_CTX_DAG_ID='muse_dag' AIRFLOW_CTX_TASK_ID='extract_crypto_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T00:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-01T00:30:00+00:00'
+[2025-02-24T09:50:31.123+0800] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-24T09:50:31.124+0800] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-24T09:50:31.127+0800] {logging_mixin.py:190} INFO - Current task name:extract_crypto_data state:running start_date:2025-02-24 01:50:30.802443+00:00
+[2025-02-24T09:50:31.129+0800] {logging_mixin.py:190} INFO - Dag name:muse_dag and current dag run status:running
+[2025-02-24T09:50:31.132+0800] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-24T09:50:31.140+0800] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-24T09:50:31.144+0800] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '/mnt/c/Users/User/laurence/Muse_assessment/muse_env/bin/python3 ../src/extract_crypto.py']
+[2025-02-24T09:50:31.151+0800] {subprocess.py:99} INFO - Output:
+[2025-02-24T09:50:31.210+0800] {subprocess.py:106} INFO - /mnt/c/Users/User/laurence/Muse_assessment/muse_env/bin/python3: can't open file '/tmp/airflowtmpota9ur6r/../src/extract_crypto.py': [Errno 2] No such file or directory
+[2025-02-24T09:50:31.212+0800] {subprocess.py:110} INFO - Command exited with return code 2
+[2025-02-24T09:50:31.227+0800] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 763, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-24T09:50:31.255+0800] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-24T09:50:31.257+0800] {logging_mixin.py:190} INFO - Task start:2025-02-24 01:50:30.802443+00:00 end:2025-02-24 01:50:31.255457+00:00 duration:0.453014
+[2025-02-24T09:50:31.259+0800] {logging_mixin.py:190} INFO - Task:<Task(BashOperator): extract_crypto_data> dag:<DAG: muse_dag> dagrun:<DagRun muse_dag @ 2025-02-01 00:30:00+00:00: scheduled__2025-02-01T00:30:00+00:00, state:running, queued_at: 2025-02-24 01:48:21.334082+00:00. externally triggered: False>
+[2025-02-24T09:50:31.261+0800] {logging_mixin.py:190} INFO - Failure caused by Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-24T09:50:31.263+0800] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=muse_dag, task_id=extract_crypto_data, run_id=scheduled__2025-02-01T00:30:00+00:00, execution_date=20250201T003000, start_date=20250224T015030, end_date=20250224T015031
+[2025-02-24T09:50:31.347+0800] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-24T09:50:31.349+0800] {standard_task_runner.py:124} ERROR - Failed to execute job 7 for task extract_crypto_data (Bash command failed. The command returned a non-zero exit code 2.; 25226)
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 763, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-24T09:50:31.382+0800] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-24T09:50:31.402+0800] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-24T09:50:31.404+0800] {local_task_job_runner.py:245} INFO - ::endgroup::

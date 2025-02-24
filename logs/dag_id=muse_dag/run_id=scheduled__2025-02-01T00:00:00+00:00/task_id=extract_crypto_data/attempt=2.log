@@ -1,0 +1,155 @@
+[2025-02-24T09:48:56.977+0800] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-24T09:48:57.005+0800] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: muse_dag.extract_crypto_data scheduled__2025-02-01T00:00:00+00:00 [queued]>
+[2025-02-24T09:48:57.027+0800] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: muse_dag.extract_crypto_data scheduled__2025-02-01T00:00:00+00:00 [queued]>
+[2025-02-24T09:48:57.029+0800] {taskinstance.py:2867} INFO - Starting attempt 2 of 2
+[2025-02-24T09:48:57.079+0800] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): extract_crypto_data> on 2025-02-01 00:00:00+00:00
+[2025-02-24T09:48:57.083+0800] {standard_task_runner.py:72} INFO - Started process 24527 to run task
+[2025-02-24T09:48:57.088+0800] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'muse_dag', 'extract_crypto_data', 'scheduled__2025-02-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/muse_dag.py', '--cfg-path', '/tmp/tmp0r_ly1n6']
+[2025-02-24T09:48:57.091+0800] {standard_task_runner.py:105} INFO - Job 4: Subtask extract_crypto_data
+[2025-02-24T09:48:57.220+0800] {task_command.py:467} INFO - Running <TaskInstance: muse_dag.extract_crypto_data scheduled__2025-02-01T00:00:00+00:00 [running]> on host LAPTOP-7NCGBFK9.
+[2025-02-24T09:48:57.435+0800] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alksjdf63523@gmail.com' AIRFLOW_CTX_DAG_OWNER='laurence' AIRFLOW_CTX_DAG_ID='muse_dag' AIRFLOW_CTX_TASK_ID='extract_crypto_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-01T00:00:00+00:00'
+[2025-02-24T09:48:57.440+0800] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-24T09:48:57.441+0800] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-24T09:48:57.443+0800] {logging_mixin.py:190} INFO - Current task name:extract_crypto_data state:running start_date:2025-02-24 01:48:57.007767+00:00
+[2025-02-24T09:48:57.444+0800] {logging_mixin.py:190} INFO - Dag name:muse_dag and current dag run status:running
+[2025-02-24T09:48:57.446+0800] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-24T09:48:57.459+0800] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-24T09:48:57.466+0800] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '/mnt/c/Users/User/laurence/Muse_assessment/muse_env/bin/python3 ../src/extract_crypto.py']
+[2025-02-24T09:48:57.474+0800] {subprocess.py:99} INFO - Output:
+[2025-02-24T09:48:57.538+0800] {subprocess.py:106} INFO - /mnt/c/Users/User/laurence/Muse_assessment/muse_env/bin/python3: can't open file '/tmp/airflowtmpx_dq8qx9/../src/extract_crypto.py': [Errno 2] No such file or directory
+[2025-02-24T09:48:57.540+0800] {subprocess.py:110} INFO - Command exited with return code 2
+[2025-02-24T09:48:57.563+0800] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 763, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-24T09:48:57.592+0800] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-24T09:48:57.594+0800] {logging_mixin.py:190} INFO - Task start:2025-02-24 01:48:57.007767+00:00 end:2025-02-24 01:48:57.591903+00:00 duration:0.584136
+[2025-02-24T09:48:57.597+0800] {logging_mixin.py:190} INFO - Task:<Task(BashOperator): extract_crypto_data> dag:<DAG: muse_dag> dagrun:<DagRun muse_dag @ 2025-02-01 00:00:00+00:00: scheduled__2025-02-01T00:00:00+00:00, state:running, queued_at: 2025-02-24 01:47:15.397512+00:00. externally triggered: False>
+[2025-02-24T09:48:57.599+0800] {logging_mixin.py:190} INFO - Failure caused by Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-24T09:48:57.601+0800] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=muse_dag, task_id=extract_crypto_data, run_id=scheduled__2025-02-01T00:00:00+00:00, execution_date=20250201T000000, start_date=20250224T014857, end_date=20250224T014857
+[2025-02-24T09:48:57.631+0800] {logging_mixin.py:190} WARNING - /mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py:155 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2025-02-24T09:48:57.635+0800] {configuration.py:1074} WARNING - section/key [smtp/smtp_user] not found in config
+[2025-02-24T09:48:57.637+0800] {email.py:272} INFO - Email alerting: attempt 1
+[2025-02-24T09:48:57.652+0800] {configuration.py:1074} WARNING - section/key [smtp/smtp_user] not found in config
+[2025-02-24T09:48:57.654+0800] {email.py:272} INFO - Email alerting: attempt 1
+[2025-02-24T09:48:57.656+0800] {taskinstance.py:1235} ERROR - Failed to send email to: ['alksjdf63523@gmail.com']
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 763, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1443, in _email_alert
+    send_email(task.email, subject, html_content)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 155, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 274, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 318, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1233, in _handle_failure
+    task_instance.email_alert(error, failure_context["task"])
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3611, in email_alert
+    _email_alert(task_instance=self, exception=exception, task=task)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1445, in _email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 155, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 274, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/email.py", line 318, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+[2025-02-24T09:48:57.736+0800] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-24T09:48:57.738+0800] {standard_task_runner.py:124} ERROR - Failed to execute job 4 for task extract_crypto_data (Bash command failed. The command returned a non-zero exit code 2.; 24527)
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 763, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-24T09:48:57.786+0800] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-24T09:48:57.820+0800] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-24T09:48:57.859+0800] {local_task_job_runner.py:245} INFO - ::endgroup::

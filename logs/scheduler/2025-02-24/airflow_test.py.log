@@ -1,0 +1,41 @@
+[2025-02-24T09:43:37.910+0800] {processor.py:186} INFO - Started process (PID=21916) to work on /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:43:37.912+0800] {processor.py:914} INFO - Processing file /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py for tasks to queue
+[2025-02-24T09:43:37.918+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:43:37.916+0800] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:43:37.978+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:43:37.959+0800] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py", line 17, in <module>
+    logger.addHandler(logging.FileHandler(FILE_PATH)) # Store log to file and show in shell
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/d/laurence/big_data/airflow/logs/airflow_test.log'
+[2025-02-24T09:43:37.980+0800] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:43:38.033+0800] {processor.py:208} INFO - Processing /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py took 0.142 seconds
+[2025-02-24T09:45:28.792+0800] {processor.py:186} INFO - Started process (PID=22915) to work on /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:45:28.794+0800] {processor.py:914} INFO - Processing file /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py for tasks to queue
+[2025-02-24T09:45:28.797+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:45:28.796+0800] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:45:28.825+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:45:28.814+0800] {dagbag.py:387} ERROR - Failed to import: /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+Traceback (most recent call last):
+  File "/mnt/c/Users/User/laurence/Muse_assessment/muse_env/lib/python3.10/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py", line 17, in <module>
+    logger.addHandler(logging.FileHandler(FILE_PATH)) # Store log to file and show in shell
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/d/laurence/big_data/airflow/logs/airflow_test.log'
+[2025-02-24T09:45:28.826+0800] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:45:28.869+0800] {processor.py:208} INFO - Processing /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py took 0.090 seconds
+[2025-02-24T09:47:15.146+0800] {processor.py:186} INFO - Started process (PID=23763) to work on /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:47:15.148+0800] {processor.py:914} INFO - Processing file /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py for tasks to queue
+[2025-02-24T09:47:15.151+0800] {logging_mixin.py:190} INFO - [2025-02-24T09:47:15.150+0800] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:47:15.155+0800] {processor.py:927} WARNING - No viable dags retrieved from /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py
+[2025-02-24T09:47:15.170+0800] {processor.py:208} INFO - Processing /mnt/c/Users/User/laurence/Muse_assessment/dags/airflow_test.py took 0.038 seconds
